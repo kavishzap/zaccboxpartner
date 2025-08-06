@@ -80,12 +80,15 @@ export default function LoginPage() {
       setIsLoading(false);
     }
   };
-const backgroundStyle = {
-    backgroundImage: 'radial-gradient(circle,#454545, transparent 1px)',
-    backgroundSize: '10px 10px',
-}
+  const backgroundStyle = {
+    backgroundImage: "radial-gradient(circle,#454545, transparent 1px)",
+    backgroundSize: "10px 10px",
+  };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-950 p-4 relative overflow-hidden text-gray-100" style={backgroundStyle}>
+    <div
+      className="min-h-screen flex items-center justify-center bg-gray-950 p-4 relative overflow-hidden text-gray-100"
+      style={backgroundStyle}
+    >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full blur-3xl bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
@@ -94,20 +97,25 @@ const backgroundStyle = {
 
       <Card className="w-full max-w-md relative backdrop-blur-sm bg-gray-900 border border-gray-800 shadow-2xl">
         <CardHeader className="space-y-1 text-center pb-2">
-          <CardTitle className="text-3xl font-bold text-white flex items-center justify-center gap-3">
-            Welcome to
+          <CardTitle
+            className="
+      text-2xl sm:text-3xl font-bold text-white 
+      flex flex-col sm:flex-row items-center justify-center gap-3
+    "
+          >
+            <span>Welcome to</span>
             <Image
               src={ZaccboxLogo}
               alt="Zaccbox Logo"
-              width={128} // Increased size
-              height={128}
-              className="object-contain"
+              width={96} // smaller default size
+              height={96}
+              className="object-contain sm:w-32 sm:h-32"
               priority
               style={{ filter: "invert(0)" }}
             />
           </CardTitle>
 
-          <CardDescription className="text-gray-300">
+          <CardDescription className="text-gray-300 text-sm sm:text-base">
             Please sign in to your account
           </CardDescription>
         </CardHeader>
